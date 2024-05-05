@@ -1,0 +1,48 @@
+extends:
+  - 'eslint:recommended'
+  - 'plugin:@typescript-eslint/recommended'
+  - 'plugin:react/recommended'
+  - 'plugin:react-hooks/recommended'
+  - 'prettier'
+parser: '@typescript-eslint/parser'
+plugins:
+  - 'react'
+  - 'react-refresh'
+  - 'prettier'
+  - '@typescript-eslint'
+globals: { window: true }
+env: {
+  browser: true,
+  node: true,
+  es6: true,
+}
+rules:
+  {
+    'react/prop-types': "off",
+    'no-console': 'off',
+    'no-nested-ternary': 'off',
+    'no-underscore-dangle': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    'consistent-return': 'off',
+    'quotes': 'off',
+    'react-hooks/exhaustive-deps': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-dynamic-require': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react-refresh/only-export-components': [
+    'warn', {allowConstantExport: true}]
+  }
+ignorePatterns:
+  - 'node_modules'
+  - 'build'
+  - 'out'
+  - 'resources'
+  - '*.config.{js,ts}'

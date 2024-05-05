@@ -1,0 +1,9 @@
+{
+  "header": {
+    "title": "Home"
+  },
+  "title": {
+    "notFound": "Page not found",
+    "/": "Home"
+  }
+}
